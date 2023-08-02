@@ -1,11 +1,11 @@
 from flask import Flask, render_template, request
 import qrcode
 
-app=Flask(__name__, render_template('index.html'))
+app=Flask(__name__, template_folder='template')
 
 @app.route('/')
 def home():
-    return render_template('index.html',"hi" )
+    return render_template('index.html')
 
 
 if __name__=='__main__':
